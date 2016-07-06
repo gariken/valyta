@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0954DD82C16F14BE626C987B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3341B25EF98051BD35D1298 /* Pods.framework */; };
 		1F2326801D2BD5C500451615 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F23267F1D2BD5C500451615 /* TableViewController.swift */; };
+		1F9CED421D2D1732002CF740 /* content in Resources */ = {isa = PBXBuildFile; fileRef = 1F9CED411D2D1732002CF740 /* content */; };
 		1FD060741D200C9F00E03CD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD060731D200C9F00E03CD8 /* AppDelegate.swift */; };
 		1FD060761D200C9F00E03CD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD060751D200C9F00E03CD8 /* ViewController.swift */; };
 		1FD060791D200C9F00E03CD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD060771D200C9F00E03CD8 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		1F23267F1D2BD5C500451615 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		1F9CED411D2D1732002CF740 /* content */ = {isa = PBXFileReference; lastKnownFileType = folder; path = content; sourceTree = "<group>"; };
 		1FD060701D200C9F00E03CD8 /* valyta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = valyta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD060731D200C9F00E03CD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FD060751D200C9F00E03CD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				1FEF48631D2C60830013686A /* Podfile */,
+				1F9CED411D2D1732002CF740 /* content */,
 				1FD060721D200C9F00E03CD8 /* valyta */,
 				1FD060711D200C9F00E03CD8 /* Products */,
 				E7A3E4FC80D856792CC3DC63 /* Pods */,
@@ -166,6 +169,7 @@
 				1FD0607E1D200C9F00E03CD8 /* Assets.xcassets in Resources */,
 				1FEF48641D2C60830013686A /* Podfile in Resources */,
 				1FD060791D200C9F00E03CD8 /* Main.storyboard in Resources */,
+				1F9CED421D2D1732002CF740 /* content in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

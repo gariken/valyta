@@ -100,8 +100,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqa-cL-L7p">
-                                <rect key="frame" x="423" y="469" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="411" y="469" width="70" height="30"/>
+                                <state key="normal" title="Обновить"/>
                                 <connections>
                                     <action selector="updateData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hYK-Ps-gf2"/>
                                 </connections>
@@ -124,7 +124,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hR5-7s-h72" secondAttribute="bottom" constant="55" id="YOX-fn-kbt"/>
                             <constraint firstItem="RQA-Eg-cBc" firstAttribute="centerX" secondItem="sbv-HC-sIX" secondAttribute="centerX" id="cvG-Qy-GMP"/>
                             <constraint firstItem="hR5-7s-h72" firstAttribute="top" secondItem="fqa-cL-L7p" secondAttribute="bottom" constant="2" id="jFu-kW-AbI"/>
-                            <constraint firstAttribute="trailing" secondItem="fqa-cL-L7p" secondAttribute="trailing" constant="131" id="k50-4H-5eh"/>
+                            <constraint firstAttribute="trailing" secondItem="fqa-cL-L7p" secondAttribute="trailing" constant="119" id="k50-4H-5eh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RQA-Eg-cBc" secondAttribute="bottom" constant="156" id="lWz-Ce-ewx"/>
                             <constraint firstItem="sbv-HC-sIX" firstAttribute="top" secondItem="hpN-vT-Paw" secondAttribute="bottom" constant="13" id="lyB-vV-9Tr"/>
                             <constraint firstItem="sbv-HC-sIX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="154" id="mis-Pe-KMG"/>
@@ -157,6 +157,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="rtS-Ny-Lx0">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="F10-7t-mpK"/>
                         <barButtonItem key="rightBarButtonItem" title="История" id="Vxh-4i-5r6">
                             <connections>
                                 <segue destination="HOI-Gd-KVv" kind="push" id="HR1-z9-bbx"/>
@@ -173,7 +174,7 @@
             </objects>
             <point key="canvasLocation" x="1207" y="349"/>
         </scene>
-        <!--Table View Controller-->
+        <!--История операицй-->
         <scene sceneID="3SR-Ra-bTr">
             <objects>
                 <tableViewController id="HOI-Gd-KVv" customClass="TableViewController" customModule="valyta" customModuleProvider="target" sceneMemberID="viewController">
@@ -196,7 +197,7 @@
                             <outlet property="delegate" destination="HOI-Gd-KVv" id="sj0-4a-SFN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="eQw-oL-DUU"/>
+                    <navigationItem key="navigationItem" title="История операицй" id="eQw-oL-DUU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7U-ih-a9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

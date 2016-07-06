@@ -23,12 +23,26 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="0UW-Yo-heC">
+                                <rect key="frame" x="180" y="277" width="240" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="6tE-hn-3cy"/>
+                                    <constraint firstAttribute="width" constant="240" id="r0y-2C-gPt"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="0UW-Yo-heC" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="8pJ-98-uNR"/>
                             <constraint firstItem="lXp-z5-kP9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="GKq-L3-RMx"/>
+                            <constraint firstItem="0UW-Yo-heC" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Hi1-Hs-ymy"/>
                             <constraint firstItem="lXp-z5-kP9" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="OVi-ID-WuE"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="lXp-z5-kP9"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -36,4 +50,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="301" height="46"/>
+    </resources>
 </document>
