@@ -26,8 +26,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        htmlData()
-        algoritm()
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)){
+            dispatch_async(dispatch_get_main_queue(), {
+                self.htmlData()
+                self.algoritm()
+            })
+        }
     }
     
     @IBAction func updateData(sender: AnyObject) {
@@ -37,6 +41,10 @@ class ViewController: UIViewController {
                 self.algoritm()
             })
         }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
         
     func htmlData(){

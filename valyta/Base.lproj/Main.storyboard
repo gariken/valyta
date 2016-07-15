@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Покупка" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbv-HC-sIX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Загрузка.." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbv-HC-sIX">
                                 <rect key="frame" x="0.0" y="165" width="600" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="6Xv-Qw-YlW"/>
@@ -49,7 +50,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Продажа" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQA-Eg-cBc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Загрузка.." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQA-Eg-cBc">
                                 <rect key="frame" x="0.0" y="385" width="600" height="59"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="ZcR-xD-elg"/>
@@ -131,7 +132,7 @@
                                     <constraint firstAttribute="width" constant="61" id="Xef-b5-Xo8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02W-gg-fHP">
@@ -207,7 +208,7 @@
                         <barButtonItem key="backBarButtonItem" title="Назад" id="F10-7t-mpK"/>
                         <barButtonItem key="rightBarButtonItem" title="История" id="Vxh-4i-5r6">
                             <connections>
-                                <segue destination="HOI-Gd-KVv" kind="push" id="HR1-z9-bbx"/>
+                                <segue destination="27J-nE-Su0" kind="push" id="uhm-nz-2mj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -225,34 +226,95 @@
             </objects>
             <point key="canvasLocation" x="1207" y="349"/>
         </scene>
-        <!--История операицй-->
-        <scene sceneID="3SR-Ra-bTr">
+        <!--История-->
+        <scene sceneID="myN-kY-OT1">
             <objects>
-                <tableViewController id="HOI-Gd-KVv" customClass="TableViewController" customModule="valyta" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mUT-XE-cVb">
+                <tableViewController id="27J-nE-Su0" customClass="histroryViewController" customModule="valyta" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="eK7-Qc-Khy">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="U5c-AN-QrL">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="90" id="Xyg-8U-4f3" customClass="historyCell" customModule="valyta" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U5c-AN-QrL" id="kVl-Kf-YmC">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xyg-8U-4f3" id="kcg-oM-ntd">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Продажа:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTJ-Tc-gw4">
+                                            <rect key="frame" x="18" y="21" width="79" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Deb-I0-pXH">
+                                            <rect key="frame" x="113" y="21" width="39" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Покупка:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDK-it-8hT">
+                                            <rect key="frame" x="173" y="21" width="72" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNz-oV-gqV">
+                                            <rect key="frame" x="262" y="21" width="39" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbP-3t-xS0">
+                                            <rect key="frame" x="61" y="56" width="48" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uyk-hV-pBJ">
+                                            <rect key="frame" x="112" y="56" width="134" height="21"/>
+                                            <string key="text">12/07/2016 09:18
+</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="GTJ-Tc-gw4" firstAttribute="baseline" secondItem="Deb-I0-pXH" secondAttribute="baseline" id="8k0-93-K4f"/>
+                                        <constraint firstItem="Deb-I0-pXH" firstAttribute="leading" secondItem="GTJ-Tc-gw4" secondAttribute="trailing" constant="16" id="UTU-dy-HmG"/>
+                                        <constraint firstItem="Deb-I0-pXH" firstAttribute="baseline" secondItem="iDK-it-8hT" secondAttribute="baseline" id="dMF-It-sfL"/>
+                                        <constraint firstItem="xbP-3t-xS0" firstAttribute="baseline" secondItem="Uyk-hV-pBJ" secondAttribute="baseline" id="fYg-y1-suE"/>
+                                        <constraint firstItem="Uyk-hV-pBJ" firstAttribute="leading" secondItem="xbP-3t-xS0" secondAttribute="trailing" constant="3" id="hSA-mI-UKw"/>
+                                        <constraint firstItem="xbP-3t-xS0" firstAttribute="top" secondItem="Deb-I0-pXH" secondAttribute="bottom" constant="14" id="icN-gN-vhN"/>
+                                        <constraint firstItem="xbP-3t-xS0" firstAttribute="leading" secondItem="kcg-oM-ntd" secondAttribute="leading" constant="61" id="jii-6C-Yok"/>
+                                        <constraint firstItem="GTJ-Tc-gw4" firstAttribute="top" secondItem="kcg-oM-ntd" secondAttribute="topMargin" constant="13" id="kMO-sX-HPd"/>
+                                        <constraint firstItem="iDK-it-8hT" firstAttribute="leading" secondItem="Deb-I0-pXH" secondAttribute="trailing" constant="21" id="nrY-NV-gDn"/>
+                                        <constraint firstItem="GTJ-Tc-gw4" firstAttribute="leading" secondItem="kcg-oM-ntd" secondAttribute="leadingMargin" constant="10" id="onU-bc-TBW"/>
+                                        <constraint firstItem="iDK-it-8hT" firstAttribute="baseline" secondItem="jNz-oV-gqV" secondAttribute="baseline" id="p5p-XT-XTh"/>
+                                        <constraint firstItem="jNz-oV-gqV" firstAttribute="leading" secondItem="iDK-it-8hT" secondAttribute="trailing" constant="17" id="rHR-DO-n4K"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dataLabel" destination="Uyk-hV-pBJ" id="4GD-u3-GGV"/>
+                                    <outlet property="pokupkaLabel" destination="jNz-oV-gqV" id="Dd3-e9-DLY"/>
+                                    <outlet property="prodajaLabel" destination="Deb-I0-pXH" id="uXd-J8-gm6"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="HOI-Gd-KVv" id="Na8-Cj-zGF"/>
-                            <outlet property="delegate" destination="HOI-Gd-KVv" id="sj0-4a-SFN"/>
+                            <outlet property="dataSource" destination="27J-nE-Su0" id="6jd-AD-Ll3"/>
+                            <outlet property="delegate" destination="27J-nE-Su0" id="ITM-a5-56V"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="История операицй" id="eQw-oL-DUU"/>
+                    <navigationItem key="navigationItem" title="История" id="vC0-sm-VBb">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="oVF-FR-Bme"/>
+                    </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t7U-ih-a9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4bE-z6-2ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2032" y="-103"/>
+            <point key="canvasLocation" x="2084" y="-93"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zpt-0q-2xw">
