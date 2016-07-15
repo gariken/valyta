@@ -33,8 +33,8 @@ class histroryViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! historyCell
         
-        cell.prodajaLabel.text = Prodaja[indexPath.row]
-        cell.pokupkaLabel.text = Pokupka[indexPath.row]
+        cell.prodajaLabel.text = Pokupka[indexPath.row]
+        cell.pokupkaLabel.text = Prodaja[indexPath.row]
         cell.dataLabel.text = Data[indexPath.row]
         
 
